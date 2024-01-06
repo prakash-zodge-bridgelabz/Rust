@@ -1,3 +1,4 @@
+use std::mem; 
 fn main() {
     let a:u8 = 128;     // u - unsigned,    8-8bit -> 0-255,    its immutable means we cannot overring new number
                                         // 0 ..... 2^(N-1)
@@ -9,4 +10,7 @@ fn main() {
     println!("Before b = {}",b);
     b = 44;
     println!("After b = {}",b);
+
+    let mut c = 123456789;          // bydefault it takes i32 data size
+    print!("c = {} and it takes size in bytes = {}",c,mem::size_of_val(&c));    //i32 --> 32bits --> 32/8 = 4bytes
 }
