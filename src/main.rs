@@ -1,5 +1,5 @@
 #![allow(dead_code)]
-mod sh;
+mod loops;
 fn main(){
-    sh::stack_and_heap();       //calling method from sh file
+    loops::useNestedLoops();
 }
